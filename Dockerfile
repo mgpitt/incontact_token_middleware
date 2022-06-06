@@ -22,7 +22,7 @@ RUN set -ex; \
 
 # Copy in custom code from the host machine.
 WORKDIR /var/www/html
-COPY . ./
+COPY . ./middleware
 
 # Use the PORT environment variable in Apache configuration files.
 # https://cloud.google.com/run/docs/reference/container-contract#port

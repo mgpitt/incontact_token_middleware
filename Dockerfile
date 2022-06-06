@@ -21,7 +21,7 @@ RUN set -ex; \
   } > "$PHP_INI_DIR/conf.d/cloud-run.ini"
 
 # Copy in custom code from the host machine.
-WORKDIR /var/www/html
+RUN pwd
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN composer install
 

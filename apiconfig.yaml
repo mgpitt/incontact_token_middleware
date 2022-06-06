@@ -1,0 +1,20 @@
+swagger: "2.0"
+info:
+      title: API_ID optional-string
+      description: "Gets incontact token."
+      version: "1.0.0"
+host: DNS_NAME_OF_DEPLOYED_API
+schemes:
+      - "https"
+paths:
+      "/":
+        post:
+          description: "Get token"
+          operationId: "token"
+          responses:
+            200:
+              description: "Success."
+              schema:
+                type: string
+            400:
+              description: "token is "

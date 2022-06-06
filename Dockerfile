@@ -22,7 +22,8 @@ RUN set -ex; \
 
 # Copy in custom code from the host machine.
 WORKDIR /var/www/html
-COPY . ./middleware
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+RUN composer install
 
 # Use the PORT environment variable in Apache configuration files.
 # https://cloud.google.com/run/docs/reference/container-contract#port
